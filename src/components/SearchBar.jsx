@@ -5,6 +5,7 @@ const SearchBar = ({ onSearch }) => {
         if (city) {
             onSearch(city)
             e.target.city.value = ''
+            e.target.city.blur() // Remove focus from input
         }
     }
 
