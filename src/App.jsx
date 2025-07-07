@@ -29,7 +29,7 @@ function App() {
           }
         },
         (err) => {
-          setError('Please enable location access to see your local weather')
+          setError(err || 'Please enable location access to see your local weather')
           setLoading(false)
         },
         { timeout: 10000 } // Add timeout for geolocation
