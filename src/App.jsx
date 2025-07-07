@@ -58,19 +58,21 @@ function App() {
 
   return (
     <div className={`fixed inset-0 flex flex-col ${styles.background} transition-colors duration-500`}>
-      <div className='overflow-y-auto py-6 px-5'>
-        <h1 className={`text-3xl font-bold text-center ${styles.text} mb-3 tracking-tight`}>
-          Weather Dashboard
-        </h1>
-        <Clock />
+      <div className=" overflow-y-auto">
+        <div className='max-w-md mx-auto w-full min-h-screen py-6 px-5'>
+          <h1 className={`text-3xl font-bold text-center ${styles.text} mb-3 tracking-tight`}>
+            Weather Dashboard
+          </h1>
+          <Clock />
 
-        <SearchBar onSearch={handleCitySearch} />
+          <SearchBar onSearch={handleCitySearch} />
 
-        <WeatherCard
-          weatherData={weatherData}
-          loading={loading}
-          error={error}
-        />
+          <WeatherCard
+            weatherData={weatherData}
+            loading={loading}
+            error={error}
+          />
+        </div>
       </div>
     </div>
   )
